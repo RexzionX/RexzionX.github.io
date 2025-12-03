@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etawanesia - Susu Kambing Etawa Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="Bahan Foto/Logo Etawanesia.png" alt="Logo Etawanesia"> 
+        </a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#products">Paket Produk</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        
+        <div class="header-icon">
+            <i class='bx bx-search' id="search-icon"></i>
+        </div>
+
+        <div class="search-box">
+            <input type="search" name="search-input" id="search-input" placeholder="Cari produk Etawanesia...">
+        </div>
+    </header>
+
+    <!-- CAROUSEL HOME SECTION -->
+    <div class="home-carousel-wrapper" id="home">
+        <div class="home-carousel">
+            
+            <!-- SLIDE 1 - PRODUK UTAMA -->
+            <section class="home slide-1">
+                <div class="home-text">
+                    <h1>Etawanesia <br> Susu Kambing Etawa</h1>
+                    <p>Susu Kambing Etawa bubuk berkualitas tinggi dari Etawanesia. Dapatkan manfaat kesehatan terbaik dengan berbagai pilihan paket hemat kami.</p>
+                    <a href="https://shopee.co.id/etawanesiaofficial" target="_blank" class="btn">Pesan Sekarang</a>
+                </div>
+                <div class="home-img">
+                    <img src="Bahan Foto/Kemasan Etawanesia.webp" alt="Produk Susu Etawanesia">
+                </div>
+            </section>
+
+            <!-- SLIDE 2 - MANFAAT KESEHATAN -->
+            <section class="home slide-2">
+                <div class="home-text">
+                    <h1>Solusi Kesehatan <br> Keluarga Indonesia</h1>
+                    <p>Diperkaya dengan Ekstrak Daun Kelor untuk mengatasi asam urat, gangguan pernapasan, dan menjaga kesehatan tulang & sendi Anda.</p>
+                    <a href="about.html" class="btn">Pelajari Manfaat</a>
+                </div>
+                <div class="home-img">
+                    <img src="Bahan Foto/Dokter Rekomendasi Etawanesia.png" alt="Manfaat Etawanesia">
+                </div>
+            </section>
+
+            <!-- SLIDE 3 - TESTIMONI & KEPERCAYAAN -->
+            <section class="home slide-3">
+                <div class="home-text">
+                    <h1>Dipercaya <br> Ribuan Keluarga</h1>
+                    <p>Tersertifikasi BPOM & Halal. Direkomendasikan artis ternama dan dipercaya oleh ribuan keluarga Indonesia untuk kesehatan optimal.</p>
+                    <a href="#products" class="btn">Lihat Paket Hemat</a>
+                </div>
+                <div class="home-img">
+                    <img src="Bahan Foto/ETAWANESIA DEMI KESEHATAN KELUARGA4.webp" alt="Testimoni Etawanesia">
+                </div>
+            </section>
+
+            <!-- SLIDE 4 - DIANESIA MULTIGRAIN -->
+            <section class="home slide-4">
+                <div class="home-text">
+                    <h1>Dianesia <br> Multigrain</h1>
+                    <p>Minuman serbuk sereal multigrain premium dari keluarga brand Etawa. Nutrisi lengkap dengan kombinasi biji-bijian pilihan untuk kesehatan maksimal.</p>
+                    <a href="https://shopee.co.id/etawanesiaofficial" target="_blank" class="btn">Pesan Dianesia</a>
+                </div>
+                <div class="home-img">
+                    <img src="Bahan Foto/DIANESIA 5.png" alt="Produk Dianesia Multigrain">
+                </div>
+            </section>
+
+        </div>
+
+        <!-- CAROUSEL NAVIGATION -->
+        <button class="carousel-arrow prev">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <button class="carousel-arrow next">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+
+        <!-- CAROUSEL DOTS -->
+        <div class="carousel-controls"></div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Bahan Foto/Artis Ternama.png" alt="Tentang Etawanesia">
+        </div>
+        <div class="about-text">
+            <h2>Tentang Etawanesia</h2>
+            <p>Etawanesia hadir untuk menyediakan produk susu kambing etawa bubuk murni yang diolah secara higienis dan modern.</p>
+            <p>Kami berkomitmen pada kualitas dan manfaat kesehatan, memastikan setiap tegukan memberikan nutrisi terbaik untuk keluarga Anda.</p>
+            <p>Dibuat dari peternakan kambing etawa pilihan, dijamin segar dan tanpa bahan pengawat!</p>
+            <a href="about.html" class="btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+    <div class="heading">
+        <h2>Paket Produk Unggulan</h2>
+    </div>
+    
+    <div class="products-wrapper">
+        
+        <button class="product-arrow prev" onclick="scrollProducts('left')">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+
+        <div class="products-container" id="products-container">
+            <div class="box">
+                <img src="Bahan Foto/ETAWANESIA DEMI KESEHATAN KELUARGA4.webp" alt="Paket Hemat A Etawanesia">
+                <h3>Paket Keluarga</h3>
+                <p>Isi: 3 kotak Susu Etawanesia.</p>
+                <div class="content">
+                    <span>Rp. 230.000</span>
+                    <a href="https://shopee.co.id/PAKET-3-BOX-Susu-ETAWANESIA-REKOMENDASI-DOKTER-Susu-Kambing-Premium-Etawa-Biru-Bubuk-etawa-super-ETAWANESIA-ORIGINAL-i.221827494.4138355469?extraParams=%7B%22display_model_id%22%3A192580836693%7D" target="_blank">Pesan Paket</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Bahan Foto/ETAWANESIA DEMI KESEHATAN KELUARGA(ALPHA).webp" alt="Paket Coba-Coba D Etawanesia">
+                <h3>Paket Coba-Coba</h3>
+                <p>Isi: 1 kotak Susu Etawanesia.</p>
+                <div class="content">
+                    <span>Rp. 95.000</span>
+                    <a href="https://shopee.co.id/Susu-Etawa-Biru-Etawanesia-Platinum-Atasi-Asam-Urat-Sendi-Pernafasan-Asma-Kolesterol-AMAN-AMPUH-i.221827494.5038359967?extraParams=%7B%22display_model_id%22%3A21773656586%7D" target="_blank">Pesan Paket</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Bahan Foto/PAKET 2 BOX ETAWANESIA DEMI KESEHATAN KELUARGA(ALPHA).webp" alt="Paket Keluarga B Etawanesia">
+                <h3>Paket Hemat</h3>
+                <p>Isi: 2 kotak Susu Etawanesia.</p>
+                <div class="content">
+                    <span>Rp. 180.000</span>
+                    <a href="https://shopee.co.id/PAKET-2-BOX-Susu-Etawanesia-Etawa-Biru-Platinum-Etawanesia-Original-Ekstrak-Atasi-Sesak-Nafas-Paru-Paru-Batuk-Menahun-Nyeri-Sendi-Nyeri-Otot-Herbal-Etawalin-Etawaku-Platinum-ETAWANESIA-ORIGINAL-i.221827494.4138353811?extraParams=%7B%22display_model_id%22%3A40858668573%7D" target="_blank">Pesan Paket</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Bahan Foto/BOX DIANESIA 2.png" alt="Paket Coba-Coba D Etawanesia">
+                <h3>Dianesia Multigrain</h3>
+                <p>Isi: 1 Dianesia Multigrain (10 serving).</p>
+                <div class="content">
+                    <span>Rp. 175.000</span>
+                    <a href="https://shopee.co.id/Susu-Etawa-Biru-Etawanesia-Platinum-Atasi-Asam-Urat-Sendi-Pernafasan-Asma-Kolesterol-AMAN-AMPUH-i.221827494.5038359967?extraParams=%7B%22display_model_id%22%3A21773656586%7D" target="_blank">Pesan Paket</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="product-arrow next" onclick="scrollProducts('right')">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Hubungi Kami</h2>
+        </div>
+
+        <div class="container">
+            <div class="contact-info">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d109.2345!3d-7.4321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjUnMTkuNCJTIDEwOcKwMTQnMDQuMyJF!5e0!3m2!1sen!2sid!4v1634567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="info">
+                    <h2>Informasi Kontak</h2>
+                    <p><strong>Alamat:</strong> [Alamat Lengkap Etawanesia Anda]</p>
+                    <p><strong>Telepon:</strong> +6281324815147</p>
+                    <p><strong>Email:</strong> info@etawanesia.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="comment-section" id="comments">
+        <h2>ULASAN PELANGGAN</h2>
+        <form id="comments-form">
+        <br>
+        <label for="name">Nama :</label>
+        <input type="text" id="name" name="name" placeholder="Masukan Nama">
+        <br>
+        <label for="comment">Ulasan :</label>
+        <textarea id="comment" name="comment" placeholder="Tulis Ulasan Anda"></textarea>
+        <br>
+        <br>
+        <button type="button" onclick="addComments()">Kirim</button>
+        
+    </form>
+    <div class="comment-list" id="comment-list">
+        </div>
+</div>  
+
+<section class="footer">
+    <div class="footer-box">
+        <h2>Etawanesia</h2>
+        <p>Susu kambing etawa premium untuk kesehatan Anda.</p>
+        <div class="social">
+            <a href="https://www.instagram.com/etawanesia_official" target="_blank" ><i class="bx bxl-instagram"></i></a>
+            <a href="https://shopee.co.id/etawanesiaofficial" target="_blank"><i class="bx bxl-shopify"></i></a>
+            <a href="https://www.tiktok.com/@etawanesiaofficial" target="_blank"><i class="bx bxl-tiktok"></i></a>
+            
+        </div>
+    </div>
+    <div class="footer-box">
+        <h2>Dukungan</h2>
+        <li><a href="#products">Paket Produk</a></li>
+        <li><a href="#">Bantuan & Dukungan</a></li>
+        <li><a href="#">Kebijakan Pengembalian</a></li>
+        <li><a href="#">Syarat Penggunaan</a></li>
+    </div>
+</section>
+
+    <footer class="foot">
+        <p>© 2024 Etawanesia. Design by Akmal.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

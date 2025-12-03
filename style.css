@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 100px;
+}
+
+/* === TEMA WARNA BIRU ETAWANESIA (REFINED) === */
+:root {
+    --main-color: #007bff;
+    --dark-blue: #0056b3;
+    --light-blue: #e3f2fd;
+    --second-color: #f0f8ff;
+    --text-color: #1b1b1b;
+    --text-light: #555;
+    --bg-color: #ffffff;
+    --accent-color: #28a745;
+    
+    --box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+    --box-shadow-hover: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* === HEADER === */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header.shadow {
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    gap: 5px;
+}
+
+.navbar a {
+    padding: 10px 22px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+.navbar a:hover {
+    background: var(--light-blue);
+    color: var(--main-color);
+}
+
+/* === HEADER ICONS === */
+.header-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.header-icon .bx {
+    color: var(--main-color);
+    transition: 0.3s ease;
+}
+
+.header-icon .bx:hover {
+    color: var(--dark-blue);
+    transform: scale(1.15);
+}
+
+#menu-icon {
+    color: var(--main-color);
+    font-size: 28px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/* === SEARCH BOX === */
+.search-box {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--bg-color);
+    width: 100%;
+    border-bottom: 3px solid var(--main-color);
+    transition: 0.2s all linear;
+}
+
+.search-box.active {
+    top: 110%;
+    box-shadow: var(--box-shadow);
+}
+
+.search-box input {
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--light-blue);
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* === HOME CAROUSEL SECTION === */
+.home-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-carousel {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.home {
+    width: 25%;
+    min-height: 100vh;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 1.5rem;
+    padding: 50px 100px;
+    position: relative;
+}
+
+/* HOME SLIDE 1 - BIRU GRADASI */
+.home.slide-1 {
+    background: linear-gradient(135deg, #0066cc 0%, #007bff 50%, #4da6ff 100%);
+}
+
+/* HOME SLIDE 2 - BIRU TEAL */
+.home.slide-2 {
+    background: linear-gradient(135deg, #0080b3 0%, #00a8cc 50%, #4dc4d9 100%);
+}
+
+/* HOME SLIDE 3 - BIRU PURPLE */
+.home.slide-3 {
+    background: linear-gradient(135deg, #4d5dbf 0%, #5b6fd9 50%, #7c8eeb 100%);
+}
+
+/* HOME SLIDE 4 - BIRU TURQUOISE (DIANESIA) */
+.home.slide-4 {
+    background: linear-gradient(135deg, #0099cc 0%, #00b8d4 50%, #4dd0e1 100%);
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.home-img {
+    position: relative;
+    z-index: 1;
+}
+
+.home-img img {
+    width: 300px;
+    max-width: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.home-text {
+    position: relative;
+    z-index: 1;
+}
+
+.home-text h1 {
+    font-size: 3.4rem;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.home-text p {
+    font-size: 1rem;
+    color: var(--bg-color);
+    margin: 0.5rem 0 1.8rem;
+    line-height: 1.7;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* === CAROUSEL CONTROLS (HOME) === */
+.carousel-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+}
+
+.carousel-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: var(--bg-color);
+    transform: scale(1.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.2);
+}
+
+/* Carousel Navigation Arrows (HOME) */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    color: var(--bg-color);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-arrow.prev {
+    left: 40px;
+}
+
+.carousel-arrow.next {
+    right: 40px;
+}
+
+/* === BUTTON === */
+.btn {
+    padding: 12px 45px;
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: var(--dark-blue);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === ABOUT SECTION === */
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 2rem;
+    background: var(--light-blue);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    padding: 40px;
+}
+
+.about-img img {
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin: 0.5rem 0 1.1rem;
+    line-height: 1.8;
+}
+
+/* === HEADING === */
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--main-color);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.heading h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--main-color);
+    border-radius: 2px;
+}
+
+/* === PRODUCTS SECTION === */
+.products {
+    background: linear-gradient(180deg, var(--bg-color) 0%, var(--light-blue) 100%);
+}
+
+.products-wrapper {
+    position: relative;
+    padding: 0 60px;
+    margin-top: 2rem;
+}
+
+.products-container {
+    display: flex;
+    gap: 2rem;
+    padding: 20px 0;
+    
+    /* PENTING UNTUK SCROLL HORIZONTAL */
+    overflow-x: scroll; /* Mengaktifkan scroll horizontal */
+    scroll-snap-type: x mandatory; /* Mengunci scroll per item */
+    -ms-overflow-style: none; /* Menyembunyikan scrollbar untuk IE/Edge */
+    scrollbar-width: none; /* Menyembunyikan scrollbar untuk Firefox */
+}
+
+/* Menyembunyikan Scrollbar untuk Chrome, Safari, dan Opera */
+.products-container::-webkit-scrollbar {
+    display: none;
+}
+
+.products-container .box {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    background: var(--bg-color);
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    /* Lebar minimum untuk item agar scroll berfungsi */
+    min-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.products-container .box:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--main-color);
+}
+
+.products-container img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+    background: var(--light-blue);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.products-container .box:hover img {
+    transform: scale(1.05);
+}
+
+.products-container h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 1rem 0 0.5rem;
+    color: var(--text-color);
+}
+
+.products-container .box p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.products-container .box .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.products-container .box .content span {
+    padding: 8px 20px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.products-container .box .content a {
+    padding: 8px 20px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+}
+
+.products-container .box .content a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Product Carousel Navigation (Tombol Panah Scroll) */
+.product-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.product-arrow:hover {
+    background: var(--dark-blue);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.product-arrow.prev {
+    left: 10px;
+}
+
+.product-arrow.next {
+    right: 10px;
+}
+
+/* === CONTACT SECTION === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map iframe {
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+.info {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--second-color) 100%);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+.info h2 {
+    margin-top: 0;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.info p {
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.info p strong {
+    color: var(--main-color);
+}
+
+/* === SOCIAL ICONS === */
+.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--main-color);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social a i {
+    font-size: 22px;
+    color: var(--bg-color);
+}
+
+.social a:hover {
+    background: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* === FOOTER === */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--second-color) 100%);
+    padding: 50px 100px;
+    border-top: 4px solid var(--main-color);
+}
+
+.footer-box h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.footer-box p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.footer-box li {
+    margin-bottom: 8px;
+}
+
+.footer-box li a {
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.footer-box li a:hover {
+    color: var(--main-color);
+    padding-left: 5px;
+}
+
+/* === COMMENT SECTION === */
+.comment-section {
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--dark-blue) 100%);
+    padding: 35px;
+    border-radius: 15px;
+    margin: 50px auto;
+    width: 70%;
+    max-width: 800px;
+    box-shadow: var(--box-shadow-hover);
+}
+
+.comment-section h2 {
+    text-align: center;
+    color: var(--bg-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.comment-section label {
+    color: var(--bg-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+button,
+select,
+textarea {
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.comment-section button {
+    background: var(--bg-color);
+    color: var(--main-color);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.comment-section button:hover {
+    background: var(--light-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.comment-list {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+.comment-list h4 {
+    color: var(--main-color);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.comment-list p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* === FOOTER BOTTOM === */
+.foot {
+    background: linear-gradient(90deg, var(--dark-blue) 0%, var(--main-color) 100%);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    color: var(--bg-color);
+    position: relative;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.foot p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1058px) {
+    header {
+        padding: 16px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 16px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+    .home {
+        padding: 50px 4%;
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+    .footer {
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+    
+    #menu-icon {
+        display: block;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        row-gap: 1rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        border-bottom: 3px solid var(--main-color);
+    }
+    
+    .navbar a {
+        color: var(--text-color);
+    }
+    
+    .navbar a::after {
+        background: var(--main-color);
+    }
+    
+    .navbar a:hover {
+        background: var(--light-blue);
+        color: var(--main-color);
+    }
+    
+    .navbar.active {
+        top: 100%;
+    }
+    
+    .home {
+        padding: 50px 20px;
+    }
+    
+    .home-img img {
+        width: 220px;
+    }
+    
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+    
+    .carousel-arrow.prev {
+        left: 20px;
+    }
+    
+    .carousel-arrow.next {
+        right: 20px;
+    }
+    
+    .carousel-controls {
+        bottom: 30px;
+        gap: 12px;
+    }
+    
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    /* Products Responsive */
+    .products-wrapper {
+        padding: 0 50px;
+    }
+    
+    .products-container .box {
+        min-width: calc(50% - 1rem); /* Tampilkan 2 box per view di tablet/desktop kecil */
+    }
+    
+    .product-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .comment-section {
+        width: 90%;
+        padding: 25px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 11px 4%;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    .home {
+        padding: 50px 15px;
+    }
+    
+    .home-text h1 {
+        font-size: 2rem;
+    }
+    
+    .home-text p {
+        font-size: 0.9rem;
+    }
+    
+    .home-img img {
+        width: 200px;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+    
+    .carousel-arrow.prev {
+        left: 10px;
+    }
+    
+    .carousel-arrow.next {
+        right: 10px;
+    }
+    
+    .carousel-controls {
+        bottom: 25px;
+        gap: 10px;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Products Mobile */
+    .products-wrapper {
+        padding: 0 45px;
+    }
+    
+    .products-container .box {
+        min-width: 100%; /* Tampilkan 1 box per view di ponsel */
+    }
+}

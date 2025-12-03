@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Etawanesia Premium</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="main.js"></script> 
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="Bahan Foto/Logo Etawanesia.png" alt="Logo Etawanesia">
+            </a>
+            
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#komposisi">Komposisi</a></li>
+                    <li><a href="#manfaat">Manfaat Utama</a></li>
+                    <li><a href="#comments">Komentar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about" id="about">
+            <h2>Tentang Susu Etawanesia</h2>
+            <p>
+                <strong>Etawanesia</strong> adalah susu kambing etawa bubuk premium yang diperkaya dengan ekstrak Daun Kelor. Kami dikenal sebagai "Susu Etawanesia Biru" karena fokus kami pada produk yang memiliki kualitas, rasa yang enak, dan khasiat yang terbukti.
+            </p>
+            <p>
+                Kami memproses susu kambing etawa premium dari peternakan terpilih secara higienis. Untuk mengatasi masalah "bau prengus" yang sering dikeluhkan, kami menambahkan <strong>Krimer Nabati Rendah Gula</strong> sehingga susu Etawanesia memiliki rasa yang jauh lebih lezat dan nikmat tanpa mengurangi manfaatnya.
+            </p>
+            <p class="quality-assurance">
+                <strong>Jaminan Kualitas:</strong> Susu Etawanesia sudah <strong>lolos uji efikasi</strong>, memiliki <strong>sertifikat Halal</strong>, dan <strong>izin edar dari BPOM</strong>.
+            </p>
+        </section>
+
+        <section class="visi" id="komposisi">
+            <h2>Komposisi Utama</h2>
+            <ul>
+                <li><strong>Susu Kambing Etawa Premium:</strong> Diproses dengan metode evaporasi untuk menjaga kandungan gizi dan manfaat kesehatan tulang, stamina, dan daya tahan tubuh.</li>
+                <li><strong>Ekstrak Daun Kelor:</strong> Kandungan utama yang bermanfaat untuk mengatasi masalah tulang dan sendi, termasuk penyakit Asam Urat (Gout).</li>
+                <li><strong>Krimer Nabati Rendah Gula:</strong> Sebagai pemanis alami untuk menghilangkan bau khas susu kambing (bau prengus) tanpa mengurangi khasiat.</li>
+            </ul>
+        </section>
+        
+        <section class="products" id="manfaat">
+            <h2>Manfaat Kesehatan Etawanesia</h2>
+            <div class="products-list">
+                <div class="product">
+                    <i class='bx bx-bone' style="font-size: 40px; color: var(--main-color);"></i>
+                    <h3>Asam Urat & Sendi</h3>
+                    <p>Ekstrak Daun Kelor membantu mengatasi nyeri pinggang, radang sendi, dan nyeri akibat asam urat.</p>
+                </div>
+                <div class="product">
+                    <i class='bx bx-plus-medical' style="font-size: 40px; color: var(--main-color);"></i>
+                    <h3>Gangguan Pernapasan</h3>
+                    <p>Kandungan Flourin dan Betakasein efektif membantu mengatasi gangguan pernapasan, termasuk penyakit Asma.</p>
+                </div>
+                <div class="product">
+                    <i class='bx bx-heart' style="font-size: 40px; color: var(--main-color);"></i>
+                    <h3>Kolesterol & Gula Darah</h3>
+                    <p>Membantu menjaga dan menstabilkan kadar gula dan kolesterol dalam darah.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="comment-section" id="comments">
+            <h2>SARAN DAN TESTIMONI ANDA</h2>
+            <form id="comments-form">
+            <label for="name">Nama :</label>
+            <input type="text" id="name" name="name" placeholder="Masukan Nama" required>
+            <label for="comment">Komentar/Testimoni :</label>
+            <textarea id="comment" name="comment" placeholder="Tulis Komentar Anda" required></textarea>
+            <button type="button" onclick="addComments()">Kirim Komentar</button>
+        </form>
+        <div class="comment-list" id="comment-list">
+            </div>
+    </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Etawanesia. Susu Kambing Etawa Premium.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
