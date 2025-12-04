@@ -197,24 +197,238 @@ header.shadow {
     position: relative;
 }
 
-/* HOME SLIDE 1 - BIRU GRADASI VIBRANT */
+.home.slide-4 .home-img img {
+    width: 400px;
+}
+
+.home.slide-2 .home-img img {
+    width: 330px;
+}
+
+/* HOME SLIDE 1 - BIRU GRADASI VIBRANT + EFFECTS */
 .home.slide-1 {
-    background: linear-gradient(135deg, #0052cc 0%, #0066ff 30%, #0080ff 70%, #4da6ff 100%);
+    background: linear-gradient(135deg, #0047b3 0%, #0066ff 50%, #0080ff 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-/* HOME SLIDE 2 - BIRU TEAL VIBRANT */
+.home.slide-1::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    animation: float-bubble1 15s ease-in-out infinite;
+}
+
+.home.slide-1::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -50px;
+    left: 10%;
+    animation: float-bubble2 12s ease-in-out infinite;
+}
+
+/* HOME SLIDE 2 - BIRU TEAL VIBRANT + EFFECTS */
 .home.slide-2 {
-    background: linear-gradient(135deg, #006b99 0%, #0099cc 30%, #00b8d4 70%, #4dd0e1 100%);
+    background: linear-gradient(135deg, #005580 0%, #0088cc 50%, #00b8d4 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-/* HOME SLIDE 3 - BIRU PURPLE VIBRANT */
+.home.slide-2::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 20%;
+    left: -80px;
+    animation: float-bubble3 13s ease-in-out infinite;
+}
+
+.home.slide-2::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: 15%;
+    right: 5%;
+    animation: float-bubble1 14s ease-in-out infinite;
+}
+
+/* HOME SLIDE 3 - BIRU PURPLE VIBRANT + EFFECTS */
 .home.slide-3 {
-    background: linear-gradient(135deg, #3d4db3 0%, #4d5dbf 30%, #5b6fd9 70%, #7c8eeb 100%);
+    background: linear-gradient(135deg, #3d47a3 0%, #5060d9 50%, #7080eb 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-/* HOME SLIDE 4 - BIRU TURQUOISE VIBRANT (DIANESIA) */
+.home.slide-3::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -80px;
+    left: 15%;
+    animation: float-bubble2 16s ease-in-out infinite;
+}
+
+.home.slide-3::after {
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -60px;
+    right: -60px;
+    animation: float-bubble3 11s ease-in-out infinite;
+}
+
+/* HOME SLIDE 4 - BIRU TURQUOISE VIBRANT + EFFECTS (DIANESIA) */
 .home.slide-4 {
-    background: linear-gradient(135deg, #0088b3 0%, #00a8cc 30%, #00c4d4 70%, #4dd9e6 100%);
+    background: linear-gradient(135deg, #007399 0%, #00a8cc 50%, #00d4e6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.home.slide-4::before {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.13) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 25%;
+    right: -70px;
+    animation: float-bubble1 14s ease-in-out infinite;
+}
+
+.home.slide-4::after {
+    content: '';
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.09) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: 20%;
+    left: -50px;
+    animation: float-bubble2 13s ease-in-out infinite;
+}
+
+/* Bubble Float Animations */
+@keyframes float-bubble1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
+    }
+    50% {
+        transform: translate(-20px, -80px) scale(0.9);
+    }
+    75% {
+        transform: translate(40px, -50px) scale(1.05);
+    }
+}
+
+@keyframes float-bubble2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(-40px, 30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(30px, -40px) rotate(240deg);
+    }
+}
+
+@keyframes float-bubble3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50px, 50px) scale(1.15);
+    }
+}
+
+/* Animated Lines Pattern */
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.03) 50px,
+            rgba(255, 255, 255, 0.03) 100px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.02) 50px,
+            rgba(255, 255, 255, 0.02) 100px
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Decorative Circles */
+.home-text::before,
+.home-img::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.home-text::before {
+    top: -30px;
+    left: -30px;
+    animation: rotate-circle 20s linear infinite;
+}
+
+.home-img::before {
+    bottom: -40px;
+    right: -40px;
+    animation: rotate-circle 25s linear infinite reverse;
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        transform: rotate(360deg);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .home::before {
@@ -224,8 +438,33 @@ header.shadow {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.03) 50px,
+            rgba(255, 255, 255, 0.03) 100px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.02) 50px,
+            rgba(255, 255, 255, 0.02) 100px
+        );
     pointer-events: none;
+    z-index: 0;
+    animation: slide-lines 20s linear infinite;
+}
+
+@keyframes slide-lines {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, -100px -100px;
+    }
 }
 
 .home-img {
@@ -233,21 +472,159 @@ header.shadow {
     z-index: 1;
 }
 
+.home-img::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    bottom: -40px;
+    right: -40px;
+    animation: rotate-circle 25s linear infinite reverse;
+    z-index: 0;
+}
+
+.home-img::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+    animation: pulse-dot 3s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+}
+
 .home-img img {
     width: 300px;
     max-width: 100%;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.4));
     animation: float 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+/* Floating Dots Around Image */
+.home-img img::before,
+.home-img img::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Additional Floating Elements */
+.home-carousel-wrapper::before,
+.home-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.home-carousel-wrapper::before {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    top: 15%;
+    left: 5%;
+    animation: float-small1 8s ease-in-out infinite;
+}
+
+.home-carousel-wrapper::after {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+    bottom: 25%;
+    right: 8%;
+    animation: float-small2 10s ease-in-out infinite;
+}
+
+@keyframes float-small1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+}
+
+@keyframes float-small2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-25px, 35px);
+    }
 }
 
 .home-text {
     position: relative;
     z-index: 1;
+}
+
+.home-text::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: -30px;
+    left: -30px;
+    animation: rotate-circle 20s linear infinite;
+    z-index: 0;
+}
+
+.home-text::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -30px;
+    right: -30px;
+    animation: rotate-circle 15s linear infinite reverse;
+    z-index: 0;
 }
 
 .home-text h1 {
@@ -1004,4 +1381,4 @@ textarea {
     .products-container .box {
         min-width: 100%;
     }
-}
+}   
