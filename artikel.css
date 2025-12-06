@@ -9,18 +9,18 @@
 }
 
 :root {
-    --main-color: #4da6ff; /* Sky blue medium */
-    --dark-blue: #3385cc; /* Biru medium gelap */
-    --light-blue: #e6f5ff; /* Biru sangat muda yang lembut */
-    --second-color: #f2f9ff; /* Biru putih sangat lembut */
-    --text-color: #2c3e50; /* Biru tua untuk teks */
-    --text-light: #5d6d7e; /* Abu-abu biru */
+    --main-color: #3399ff; /* Sky blue kuat */
+    --dark-blue: #1a75ff; /* Biru dalam */
+    --light-blue: #e6f0ff;
+    --second-color: #f0f7ff;
+    --text-color: #1a1a2e;
+    --text-light: #4a4a6a;
     --bg-color: #ffffff;
-    --accent-color: #4dd0e1; /* Cyan soft */
+    --accent-color: #33cc99;
     
-    --box-shadow: 0 5px 20px rgba(77, 166, 255, 0.15);
-    --box-shadow-hover: 0 8px 30px rgba(77, 166, 255, 0.25);
-    --glow-effect: 0 0 20px rgba(77, 166, 255, 0.2);
+    --box-shadow: 0 5px 20px rgba(51, 153, 255, 0.2);
+    --box-shadow-hover: 0 8px 30px rgba(51, 153, 255, 0.3);
+    --glow-effect: 0 0 20px rgba(51, 153, 255, 0.25);
 }
 
 body {
@@ -106,7 +106,7 @@ header {
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-    background: var(--light-blue);
+    background: rgba(51, 153, 255, 0.15);
     color: var(--main-color);
 }
 
@@ -118,7 +118,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #3385cc 0%, #4da6ff 50%, #66b3ff 100%);
+    background: linear-gradient(135deg, #1a75ff 0%, #3399ff 50%, #4db8ff 100%);
+    box-shadow: 0 10px 40px rgba(51, 153, 255, 0.3);
     overflow: hidden;
     margin-top: 70px;
 }
@@ -246,7 +247,8 @@ header {
 
 .category {
     display: inline-block;
-    background: linear-gradient(135deg, var(--main-color) 0%, #66b3ff 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, #4db8ff 100%);
+    box-shadow: 0 4px 15px rgba(51, 153, 255, 0.3);
     color: white;
     padding: 6px 16px;
     border-radius: 20px;
@@ -275,14 +277,15 @@ header {
     align-items: center;
     gap: 8px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, var(--main-color) 0%, #66b3ff 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, #4db8ff 100%);
+    box-shadow: 0 5px 20px rgba(51, 153, 255, 0.3);
+    border: 2px solid transparent;
     color: white;
     text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
     width: fit-content;
     transition: 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
 }
 
 .btn-read:hover {
@@ -328,14 +331,14 @@ header {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 3px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .article-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--box-shadow-hover), var(--glow-effect);
     border-color: var(--main-color);
+    box-shadow: 0 15px 40px rgba(51, 153, 255, 0.25), var(--glow-effect);
 }
 
 .article-image {
@@ -362,7 +365,8 @@ header {
 
 .article-category {
     display: inline-block;
-    background: linear-gradient(135deg, var(--main-color) 0%, #66b3ff 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, #4db8ff 100%);
+    box-shadow: 0 4px 15px rgba(51, 153, 255, 0.3);
     color: white;
     padding: 5px 14px;
     border-radius: 15px;
@@ -441,7 +445,8 @@ header {
 
 /* === CTA SECTION === */
 .cta-section {
-    background: linear-gradient(135deg, #3385cc 0%, #4da6ff 50%, #66b3ff 100%);
+    background: linear-gradient(135deg, #1a75ff 0%, #3399ff 50%, #4db8ff 100%);
+    box-shadow: 0 10px 40px rgba(51, 153, 255, 0.3);
     border-radius: 25px;
     padding: 60px 40px;
     text-align: center;
@@ -506,6 +511,7 @@ header {
 /* === FOOTER === */
 footer {
     background: linear-gradient(90deg, var(--dark-blue) 0%, var(--main-color) 100%);
+    box-shadow: 0 -5px 20px rgba(51, 153, 255, 0.2);
     color: white;
     padding: 25px 0;
     text-align: center;
