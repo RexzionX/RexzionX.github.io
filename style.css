@@ -17,18 +17,18 @@ section {
 
 /* === TEMA WARNA BIRU ETAWANESIA (REFINED & VIBRANT) === */
 :root {
-    --main-color: #0066ff; /* Biru lebih vibrant */
-    --dark-blue: #0047cc; /* Biru gelap lebih tegas */
-    --light-blue: #e6f2ff; /* Biru sangat muda */
-    --second-color: #f0f7ff; /* Biru putih lembut */
-    --text-color: #1a1a1a; /* Hitam untuk teks */
-    --text-light: #555; /* Abu-abu untuk teks sekunder */
+    --main-color: #4da6ff; /* Sky blue medium - lebih soft dari biru terang */
+    --dark-blue: #3385cc; /* Biru medium gelap */
+    --light-blue: #e6f5ff; /* Biru sangat muda yang lembut */
+    --second-color: #f2f9ff; /* Biru putih sangat lembut */
+    --text-color: #2c3e50; /* Biru tua untuk teks, lebih soft dari hitam */
+    --text-light: #5d6d7e; /* Abu-abu biru untuk teks sekunder */
     --bg-color: #ffffff; /* Putih bersih */
-    --accent-color: #00d084; /* Hijau terang untuk aksen */
+    --accent-color: #4dd0e1; /* Cyan soft untuk aksen */
     
-    --box-shadow: 0 5px 20px rgba(0, 102, 255, 0.15);
-    --box-shadow-hover: 0 8px 30px rgba(0, 102, 255, 0.25);
-    --glow-effect: 0 0 20px rgba(0, 102, 255, 0.3);
+    --box-shadow: 0 5px 20px rgba(77, 166, 255, 0.15);
+    --box-shadow-hover: 0 8px 30px rgba(77, 166, 255, 0.25);
+    --glow-effect: 0 0 20px rgba(77, 166, 255, 0.2);
 }
 
 img {
@@ -207,7 +207,7 @@ header.shadow {
 
 /* HOME SLIDE 1 - BIRU GRADASI VIBRANT + EFFECTS */
 .home.slide-1 {
-    background: linear-gradient(135deg, #0047b3 0%, #0066ff 50%, #0080ff 100%);
+    background: linear-gradient(135deg, #3385cc 0%, #4da6ff 50%, #66b3ff 100%);
     position: relative;
     overflow: hidden;
 }
@@ -238,7 +238,7 @@ header.shadow {
 
 /* HOME SLIDE 2 - BIRU TEAL VIBRANT + EFFECTS */
 .home.slide-2 {
-    background: linear-gradient(135deg, #005580 0%, #0088cc 50%, #00b8d4 100%);
+    background: linear-gradient(135deg, #2d8bb8 0%, #4da6ff 50%, #66d4e1 100%);
     position: relative;
     overflow: hidden;
 }
@@ -269,7 +269,7 @@ header.shadow {
 
 /* HOME SLIDE 3 - BIRU PURPLE VIBRANT + EFFECTS */
 .home.slide-3 {
-    background: linear-gradient(135deg, #3d47a3 0%, #5060d9 50%, #7080eb 100%);
+    background: linear-gradient(135deg, #4a6fa3 0%, #6688d9 50%, #8099eb 100%);
     position: relative;
     overflow: hidden;
 }
@@ -300,7 +300,7 @@ header.shadow {
 
 /* HOME SLIDE 4 - BIRU TURQUOISE VIBRANT + EFFECTS (DIANESIA) */
 .home.slide-4 {
-    background: linear-gradient(135deg, #007399 0%, #00a8cc 50%, #00d4e6 100%);
+    background: linear-gradient(135deg, #2d8bb8 0%, #4da6ff 50%, #66d4e1 100%);
     position: relative;
     overflow: hidden;
 }
@@ -803,7 +803,7 @@ header.shadow {
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: linear-gradient(135deg, var(--main-color) 0%, #0080ff 50%, var(--dark-blue) 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, #66b3ff 50%, var(--dark-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

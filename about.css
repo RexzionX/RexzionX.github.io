@@ -5,17 +5,17 @@
 
 /* === TEMA WARNA BIRU ETAWANESIA (REFINED) === */
 :root {
-    --main-color: #007bff; /* Biru utama produk */
-    --dark-blue: #0056b3; /* Biru gelap untuk kontras */
-    --light-blue: #e3f2fd; /* Biru sangat muda untuk background */
-    --second-color: #f0f8ff; /* Biru putih lembut */
-    --text-color: #1b1b1b; /* Hitam untuk teks */
-    --text-light: #555; /* Abu-abu untuk teks sekunder */
-    --bg-color: #ffffff; /* Putih bersih */
-    --accent-color: #28a745; /* Hijau untuk aksen positif */
+    --main-color: #4da6ff; /* Sky blue medium */
+    --dark-blue: #3385cc; /* Biru medium gelap */
+    --light-blue: #e6f5ff; /* Biru sangat muda yang lembut */
+    --second-color: #f2f9ff; /* Biru putih sangat lembut */
+    --text-color: #2c3e50; /* Biru tua untuk teks */
+    --text-light: #5d6d7e; /* Abu-abu biru */
+    --bg-color: #ffffff;
+    --accent-color: #4dd0e1; /* Cyan soft */
 
-    --box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
-    --box-shadow-hover: 0 6px 20px rgba(0, 123, 255, 0.2);
+    --box-shadow: 0 4px 16px rgba(77, 166, 255, 0.1);
+    --box-shadow-hover: 0 6px 20px rgba(77, 166, 255, 0.2);
 }
 
 * {
@@ -35,8 +35,7 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     background-color: var(--light-blue);
-    /* Background dengan overlay gradasi biru yang lebih soft */
-    background-image: linear-gradient(rgba(0, 123, 255, 0.6), rgba(0, 123, 255, 0.7)),
+    background-image: linear-gradient(rgba(77, 166, 255, 0.5), rgba(51, 133, 204, 0.6)),
     url("Bahan Foto/johnson-wang-iI4sR_nkkbc-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
